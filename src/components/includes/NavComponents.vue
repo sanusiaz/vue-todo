@@ -1,7 +1,9 @@
 <template>
     <ul class="nav-routes">
-        <RouterLink :to="{ name: 'home' }">Home Page</RouterLink>
-        <RouterLink :to="{ name: 'about' }"> About</RouterLink>
+        <RouterLink :to="{ name: 'home' }">Home</RouterLink>
+        <li>
+            <a href="https://github.com/sanusiaz" target="_blank">Github</a>
+        </li>
     </ul>
 </template>
 
@@ -20,8 +22,12 @@ import { RouterLink } from 'vue-router'
         display: flex;
         flex: 1;
         justify-content: flex-end;
-        gap: 12px;
+        gap: 30px;
         list-style: none;
+
+        li, a {
+            font-size: 15.5px;
+        }
 
         a {
             text-decoration: none;
