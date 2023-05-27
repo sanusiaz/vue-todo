@@ -1,6 +1,6 @@
 # vue-crash-course
 
-This ToDo Project can be tested live here [View Live project](https://todo.samorlhosting.com)
+This task todo project is free to use. To access click => [View Live project](https://moonlit-unicorn-e116cd.netlify.app/)
 
 ## Recommended IDE Setup
 

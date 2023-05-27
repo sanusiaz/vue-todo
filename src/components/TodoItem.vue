@@ -6,7 +6,7 @@
             <div class="todo">
                 <input type="text" @change="this.todo.isEditing = false; this.$emit('triggerUpdate', this.todo.name)" @keyup="triggerNameChange" v-model="todo.name">
                 <span>
-                    Time Created: {{ new Date(todo.timeCreated * 1000) }}
+                    Time Created: {{ new Date(todo.timeCreated ).toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric", hour: "numeric", minute: "numeric", second: "numeric"}) }}
                 </span>
             </div>
 
@@ -14,13 +14,13 @@
             <!-- Mark Completed and redo -->
             <div class="todo-actions">
                 <!-- Completed Icon -->
-                <Icon icon="ph:check-circle" v-show="!this.todo.isCompleted" @click="this.todo.isCompleted = !this.todo.isCompleted; this.$emit('triggerUpdate', this.todo.isCompleted)"  color="#41b080" width="22"/>
+                <Icon title="Mark As Completed" icon="ph:check-circle" v-show="!this.todo.isCompleted" @click="this.todo.isCompleted = !this.todo.isCompleted; this.$emit('triggerUpdate', this.todo.isCompleted)"  color="#41b080" width="22"/>
 
                 <!-- Reload Icon -->
-                <Icon icon="ion:reload-circle" v-show="this.todo.isCompleted" @click="this.todo.isCompleted = !this.todo.isCompleted; this.$emit('triggerUpdate', this.todo.isCompleted)"  color="#41b080" width="22"/>
+                <Icon title="Add Task back to list" icon="ion:reload-circle" v-show="this.todo.isCompleted" @click="this.todo.isCompleted = !this.todo.isCompleted; this.$emit('triggerUpdate', this.todo.isCompleted)"  color="#41b080" width="22"/>
 
                 <!-- Delete Icon -->
-                <Icon icon="ph:trash" @click="removeCurrentList(this.todo.id), this.$emit('triggerDelete', true)"  color="#41b080" width="22"/>
+                <Icon title="Delete Task" icon="ph:trash" @click="removeCurrentList(this.todo.id), this.$emit('triggerDelete', true)"  color="#41b080" width="22"/>
             </div>
         </div>
     </li>
@@ -90,6 +90,7 @@ import { reactive, toRaw } from 'vue';
             }
 
             .todo {
+                width: 100%;
                 span {
                     color: black;
                     font-weight: bold;
