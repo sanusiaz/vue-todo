@@ -1,6 +1,6 @@
 # vue-crash-course
 
-This template should help get you started developing with Vue 3 in Vite.
+This ToDo Project can be tested live here [View Live project](https://todo.samorlhosting.com)
 
 ## Recommended IDE Setup
 

@@ -81,6 +81,13 @@ import { reactive, toRaw } from 'vue';
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 8px;
+
+            .todo-actions {
+                display: flex;
+                gap: 2px;
+                align-content: center;
+            }
 
             .todo {
                 span {

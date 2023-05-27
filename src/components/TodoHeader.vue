@@ -5,7 +5,10 @@
                 <span class="logo">
                     <Logo />
                 </span>
-                <h1>Vue Todos</h1>
+                <div style="display: flex; flex-direction: column;">
+                    <h1>Todo</h1>
+                    <span>Create & manage your tasks</span>
+                </div>
             </div>
 
             <!-- Navigation Header -->
