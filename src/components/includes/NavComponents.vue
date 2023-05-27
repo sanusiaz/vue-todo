@@ -1,7 +1,11 @@
 <template>
     <ul class="nav-routes">
         <li>
-            <a href="https://github.com/sanusiaz" target="_blank">Github</a>
+            <a href="https://github.com/sanusiaz" target="_blank">About</a>
+        </li>
+
+        <li>
+            <a href="https://github.com/sanusiaz/vue-todo" target="_blank">Github</a>
         </li>
     </ul>
 </template>
