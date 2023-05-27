@@ -1,6 +1,5 @@
 <template>
     <ul class="nav-routes">
-        <RouterLink :to="{ name: 'home' }">Home</RouterLink>
         <li>
             <a href="https://github.com/sanusiaz" target="_blank">Github</a>
         </li>
